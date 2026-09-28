@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products | FurniHome</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <div class="logo">
+                Furni<span>Home</span>
+            </div>
+
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-icons">
+                <button id="searchBtn" title="Search">🔍</button>
+                <button id="cartBtn" title="Shopping Cart">🛒</button>
+                <button class="menu-btn" id="menuBtn">☰</button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ================= PAGE HERO ================= -->
+    <section class="page-hero">
+        <div class="container page-hero-inner">
+            <p class="small-heading">CURATED COLLECTION</p>
+            <h1>Furniture for every room</h1>
+            <p>
+                Discover beautiful, functional pieces designed to transform your home into a warm and stylish space.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= PRODUCTS ================= -->
+    <section class="products section">
+        <div class="container">
+
+            <div class="shop-toolbar">
+                <div class="filter-bar" aria-label="Product categories">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="living-room">Living Room</button>
+                    <button class="filter-btn" data-filter="bedroom">Bedroom</button>
+                    <button class="filter-btn" data-filter="dining-room">Dining Room</button>
+                    <button class="filter-btn" data-filter="office">Office</button>
+                    <button class="filter-btn" data-filter="decor">Decor</button>
+                </div>
+
+                <div class="toolbar-right">
+                    <span id="productCount">8 Products</span>
+                    <select id="sortProducts" class="sort-select" aria-label="Sort products">
+                        <option value="featured">Featured</option>
+                        <option value="low-to-high">Price: Low to High</option>
+                        <option value="high-to-low">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+
+                <article class="product-card" data-category="living-room" data-price="24999">
+                    <div class="product-image">
+                        <span class="badge">NEW</span>
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" alt="Modern Comfort Sofa">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Living Room</p>
+                        <h3>Modern Comfort Sofa</h3>
+                        <div class="product-bottom">
+                            <span class="price">₹24,999</span>
+                            <button class="add-cart" data-product="Modern Comfort Sofa">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="bedroom" data-price="32499">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80" alt="Premium Wooden Bed">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Bedroom</p>
+                        <h3>Premium Wooden Bed</h3>
+                        <div class="product-bottom">
+                            <span class="price">₹32,499</span>
+                            <button class="add-cart" data-product="Premium Wooden Bed">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="dining-room" data-price="18999">
+                    <div class="product-image">
+                        <span class="badge sale">SALE</span>
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Classic Dining Table">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Dining Room</p>
+                        <h3>Classic Dining Table</h3>
+                        <div class="product-bottom">
+                            <span class="price">₹18,999</span>
+                            <button class="add-cart" data-product="Classic Dining Table">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="office" data-price="8499">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" alt="Ergonomic Office Chair">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Office</p>
+                        <h3>Ergonomic Office Chair</h3>
+                        <div class="product-bottom">
+                            <span class="price">₹8,499</span>
+                            <button class="add-cart" data-product="Ergonomic Office Chair">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="decor" data-price="4999">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Minimalist Floor Lamp">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Decor</p>
+                        <h3>Minimalist Floor Lamp</h3>
+                        <div class="product-bottom">
+                            <span class="price">₹4,999</span>
+                            <button class="add-cart" data-product="Minimalist Floor Lamp">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="living-room" data-price="16999">
+                    <div class="product-image">
+                        <span class="badge sale">HOT</span>
+                        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80" alt="Luxury Accent Chair">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Living Room</p>
+                        <h3>Luxury Accent Chair</h3>
+                        <div class="product-bottom">
+                            <span class="price">₹16,999</span>
+                            <button class="add-cart" data-product="Luxury Accent Chair">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="bedroom" data-price="28499">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80" alt="Oak Storage Wardrobe">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Bedroom</p>
+                        <h3>Oak Storage Wardrobe</h3>
+                        <div class="product-bottom">
+                            <span class="price">₹28,499</span>
+                            <button class="add-cart" data-product="Oak Storage Wardrobe">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="dining-room" data-price="22999">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80" alt="Round Dining Set">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Dining Room</p>
+                        <h3>Round Dining Set</h3>
+                        <div class="product-bottom">
+                            <span class="price">₹22,999</span>
+                            <button class="add-cart" data-product="Round Dining Set">+</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section class="features section">
+        <div class="container feature-grid">
+            <div class="feature">
+                <div class="feature-icon">🚚</div>
+                <div>
+                    <h3>Free Delivery</h3>
+                    <p>Free delivery on selected orders.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🛡️</div>
+                <div>
+                    <h3>Quality Products</h3>
+                    <p>Furniture made with quality materials.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">↩️</div>
+                <div>
+                    <h3>Easy Returns</h3>
+                    <p>Simple and convenient return process.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🔒</div>
+                <div>
+                    <h3>Secure Payment</h3>
+                    <p>Your payments are safe and secure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 FurniHome. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
